@@ -177,21 +177,56 @@ while ($final >= $inicial) {
 
 ?>
 
+<br/> <br/> <br/> <br/> <br/>
 
-<h1>Ex2</h1>
+<h1>Par ou ímpar</h1>
 <?php
 
-$inicial = 5;
-$final = 15;
+$escolhaUsuario = 'par';
+$valorUsuario = 5;
+$valorComputador;
 
-while ($final >= $inicial) {
-    echo "final = {$final} >= inicial = {$inicial} <br/>";
-    $inicial++;
-}
+echo "######## JOGO DO PAR OU ÍMPAR ########## <br/>";
+
+if ($escolhaUsuario == 'par' OR $escolhaUsuario == 'impar' OR $escolhaUsuario) {
+
+    if ( is_numeric($valorUsuario) AND $valorUsuario >= 0 AND $valorUsuario <= 10) {
+
+        $valorComputador = random_int(0, 10);
+        $resultado = $valorUsuario + $valorComputador;
+        echo "$valorUsuario (Usuario) + $valorComputador (PC) = $resultado <br/>";
+
+
+        if ( ($resultado % 2) == 0) {
+            
+            if ($escolhaUsuario == 'par') {
+
+                echo "Parabéns, você ganhou garotão!";
+            } else {
+                echo "Você perdeu... Tente novamente!";
+            }
+            
+            
+        } else { 
+            if ($escolhaUsuario == 'impar' OR $escolhaUsuario == 'impar') {
+                echo "Parabéns, você ganhou garotão!";
+
+            } else {
+                echo "Você perdeu... Tente novamente!";
+
+            }
+            
+        
+        }
+        
+
+    } else {
+        echo "Número inválido! Insira um número entre 0 e 10.";
+    }
+
+} 
 
 ?>
-
-
 
 </body>
 </html>
