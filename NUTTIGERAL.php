@@ -228,5 +228,8 @@ if ($escolhaUsuario == 'par' OR $escolhaUsuario == 'impar' OR $escolhaUsuario) {
 
 ?>
 
+
+
+
 </body>
 </html>
