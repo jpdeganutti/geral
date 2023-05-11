@@ -79,11 +79,11 @@ $senha = $_POST['senha'];
 
 
 
-echo "<br> <br> O nome completo é: {$nome} {$sobrenome}";
-echo "<br>O estado civíl: {$estadocivil}";
-echo "<br> O RG e CPF são, respectivamente: {$rg} / {$cpf}";
-echo "<br> O endereço é: {$rua}, {$n°} - {$bairro} (CEP: {$cep} )";
-echo "<br> O telefone é: {$telefone}";
-echo "<br> O email e senha são, respectivamente: {$email} | {$senha}";
+echo "<br> <br> O nome completo é: {$nome} {$sobrenome} <br>";
+echo "<br>O estado civíl: {$estadocivil} <br>";
+echo "<br> O RG e CPF são, respectivamente: {$rg} / {$cpf} <br>";
+echo "<br> O endereço é: {$rua}, {$n°} - {$bairro} (CEP: {$cep} ) <br>";
+echo "<br> O telefone é: {$telefone} <br>";
+echo "<br> O email e senha são, respectivamente: {$email} | {$senha} <br>";
 
 ?>
