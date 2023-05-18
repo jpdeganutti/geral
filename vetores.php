@@ -44,6 +44,7 @@ print_r($vetnumeros);
 
 <?php
 
+$vetnomes = [];
 $vetnomes = ["Nick", "Rick", "Dicky", "Dawn", "Dega"];
 
 
@@ -79,8 +80,95 @@ print_r($vetnomes);
 
 <?php
 
+$vetdados = [
+    'nome'=>'João',
+    'idade'=>17,
+    'cidade'=>'Bauru'
+];
+
+echo "<br>O nome da pessoa é: ".$vetdados ['nome']."<br>";
+
+$vetdados = ['profissão'=>'professor'];
+echo "<br>";
+print_r($vetdados);
+echo "<br>";
+
+if (array_key_exists('cidade', $vetdados)) {
+    echo "<br>Chave existe!<br>";
+} else {
+    echo "<br>Chave NÃO existe!<br>";
+}
+
+unset($vetdados['idade']);
+echo "<br>";
+print_r($vetdados);
+echo "<br>"; 
+
+?>
+
+<br/> <br/> <br/> <br/> <br/>
+
+<h1>Vetores Bidimensionais</h1>
+
+<?php
+
+$vetcadastro = [
+    ['nome' =>'Leonardo',
+    'end'=>'Rua Anhanguera',
+    'cidade'=>'Bauru',
+    'estado'=>'SP',
+    'bairro'=>'Vila Flores',
+    'escolaridade'=>'Ensino Médio'],
+    
+    ['nome' =>'João',
+    'end'=>'Rua Anhanguera',
+    'cidade'=>'Bauru',
+    'estado'=>'SP',
+    'bairro'=>'Vila Flores',
+    'escolaridade'=>'Ensino Médio'],
+
+    ['nome' =>'Daniel',
+    'end'=>'Rua Anhanguera',
+    'cidade'=>'Bauru',
+    'estado'=>'SP',
+    'bairro'=>'Vila Flores',
+    'escolaridade'=>'Ensino Médio'],
+
+    ['nome' =>'Pedro',
+    'end'=>'Rua Anhanguera',
+    'cidade'=>'Bauru',
+    'estado'=>'SP',
+    'bairro'=>'Vila Flores',
+    'escolaridade'=>'Ensino Médio'],
+
+    ['nome' =>'Marcos',
+    'end'=>'Rua Anhanguera',
+    'cidade'=>'Bauru',
+    'estado'=>'SP',
+    'bairro'=>'Vila Flores',
+    'escolaridade'=>'Ensino Médio']
+];
+
+$vetexemplo = [
+    ['nome' =>'Leonardo',
+    'end'=>'Rua Anhanguera',
+    'cidade'=>'Bauru',
+    'estado'=>'SP',
+    'bairro'=>'Vila Flores',
+    'escolaridade'=>'Ensino Médio']
+];
 
 
+foreach ($vetexemplo as $key => $value) {
+    echo " $key = $value <br>";
+}
+
+foreach ($vetcadastro as $key => $value) {
+    echo "<br>-------------------------------------------------------------------- <br>";
+        foreach ($vetcadastro[$key] as $key2 => $value2) {
+            echo " $key2 = $value2 ";
+    }
+}
 
 
 ?>
