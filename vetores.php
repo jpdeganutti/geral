@@ -173,5 +173,105 @@ foreach ($vetcadastro as $key => $value) {
 
 ?>
 
+
+<br/> <br/> <br/> <br/> <br/>
+
+<h1>Funções</h1>
+
+<?php
+
+function somar()
+{
+    $a = 10;
+    $b = 10;
+    $resultado = $a + $b;
+    echo "Resultado da soma = $resultado<br>";
+}
+
+function somarParametros($a, $b)
+{
+    $resultado = $a + $b;
+    echo "Resultado da soma com parâmetros = $resultado";
+}
+
+function somarDevolver($a, $b)
+{
+    $resultado = $a + $b;
+    return $resultado;
+}
+
+somar();
+
+somarParametros(10,10);
+
+$dado = somarDevolver(10,10);
+
+?>
+
+<br/> <br/> <br/> <br/> <br/>
+
+<h1>Função caucular e devolver</h1>
+
+<?php
+
+ function calcular($a, $b, $op)
+
+ {
+    if ($op == 'soma') {
+        $result = $a + $b;
+        return $result;
+    }
+
+    if ($op == 'subtração') {
+        $result = $a - $b;
+        return $result;
+    }
+
+    if ($op == 'multiplicação') {
+        $result = $a * $b;
+        return $result;
+    }
+
+    if ($op == 'divisão') {
+        $result = $a / $b;
+        return $result;
+    }
+ }
+
+ $dados = calcular(45, 89, 'multiplicação');
+echo "O resultado é $dados";
+
+?>
+
+<br/> <br/> <br/> <br/> <br/>
+
+<h1>Reajuste salarial</h1>
+
+<?php
+
+function calcularsal($sal)
+
+{
+    if ($sal <= 1320){
+        $sal = $sal * 1.10; 
+        return $sal;
+    }
+
+    if ($sal <= 3960){
+        $sal = $sal * 1.05; 
+        return $sal;
+    }
+
+    if ($sal >= 3960){
+        $sal = $sal * 1.03; 
+        return $sal;
+    }
+}
+
+$dados = calcularsal(1598);
+echo "O reajuste salarial final será de R$ $dados"
+
+?>
+
 </body>
 </html>
