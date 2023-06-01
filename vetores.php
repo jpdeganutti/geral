@@ -285,7 +285,7 @@ echo "O reajuste salarial final será de R$ $dados"
 </head>
 
 <body>
-    <h1> <h1>
+    <h1> <br> <br> </br> Sistema de reajuste de salário <h1> 
 
     <form action="" method="post">
         <label for="">Informe o salário a ser reajustado</label>
