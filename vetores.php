@@ -273,5 +273,55 @@ echo "O reajuste salarial final será de R$ $dados"
 
 ?>
 
+<br/> <br/> <br/>
+
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <h1> <h1>
+
+    <form action="" method="post">
+        <label for="">Informe o salário a ser reajustado</label>
+        <input type="text" name="salário" id="">
+        <input type="submit" value="calcular reajuste">
+
 </body>
 </html>
+
+<?php
+
+$salariooficial = reajustesalario($_POST['salário']);
+echo "<h2> Salário reajustado: "  . $salariooficial ."</h2>";
+
+function reajustesalario($salario)
+{
+    $salariominimo = 1320;
+    $salarioreajustado = 0;
+
+    if ($salario <= $salariominimo) {
+        $salarioreajustado = $salario * 1.10;
+    };
+
+    if ($salario > $salariominimo AND $salario <= 3 * $salariominimo){
+        $salarioreajustado = $salario * 1.05;
+    };
+
+    if ($salario > 3 * $salariominimo){
+        $salarioreajustado = $salario * 1.03;
+    };
+    return $salarioreajustado;
+}
+
+
+?>
+
+
+</body>
+</html>             
