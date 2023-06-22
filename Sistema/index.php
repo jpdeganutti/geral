@@ -21,7 +21,7 @@
     <div class="container text-center">
         <form action="" method="post">
             <label class="input-group" for="usuario">Usuário</label>
-            <input class="input-group mb-2 py-2" type="email" name="user" id="usuario">
+            <input class="input-group mb-2" type="email" name="user" id="usuario">
 
             <label class="input-group" for="senha">Senha</label>
             <input class="input-group mb-2" type="password" name="senha" id="senha">
