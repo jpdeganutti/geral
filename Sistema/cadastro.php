@@ -19,28 +19,69 @@
         <p>
             Preencha os campos com suas informações e clique em "cadastrar"
         </p>
-        <form action="" method="post">
+        <form action="bd.php" method="post">
 
             <div class="row">
                 <div class="col-md-6">
-                    <input class= "form-control" type="text" name="" id="" placeholder="Nome">
+                    <input class= "form-control" type="text" name="" id="" placeholder="Nome" required>
                 </div>  
 
             <div class="col-md-6">
-                    <input class= "form-control" type="text" name="" id="" placeholder="Sobrenome">
+                    <input class= "form-control" type="text" name="" id="" placeholder="Sobrenome" required>
                 </div>
             </div>
         <div>
             
-            <div class="row md-3">
+            <div class="row mt-3">
                 <div class="col-md-10">
-                    <input class= "form-control" type="text" name="end" id="" placeholder="Endereço">
+                    <input class= "form-control" type="text" name="end" id="" placeholder="Endereço" required>
                 </div>  
         
-            <div class="col-md-2">
-                    <input class= "form-control" type="number" name="num" id="" placeholder="Número">
+        
+                <div class="col-md-2">
+                    <input class= "form-control" type="number" name="num" id="" placeholder="Número" required>
                 </div>
             </div>
+
+            <div class="row mt-3">
+                <div class="col-md-6">
+                    <input class="form-control" type="text" name="cidade" id="" placeholder="Cidade" required>
+                </div>
+
+                <div class="col-md-6">
+                    <input class="form-control" type="text" name="estado" id="" placeholder="Estado" required>
+                </div> 
+
+            </div>
+
+
+            <div class="row mt-3">
+                <div class="col-md-3">
+                    <select class="form-control" name="sexo" id="">
+                        <option value=""></option>
+                        <option value="fem">Feminino</option>
+                        <option value="masc">Masculino</option>
+                        <option value="indeterminado">Prefiro não dizer</option>
+                    </select>
+                </div>
+
+                <div class="col-md-3">
+                    <input class="form-control" type="number" name="rg" id="" placeholder="RG" required>
+                </div>
+
+                <div class="col-md-3">
+                    <input class="form-control" type="number" name="cpf" id="" placeholder="CPF" required>
+                </div>
+
+                <div class="col-md-3">
+                    <input type="date" name="datanasc" id="" placeholder="Data de nascimento" required>
+                </div>
+
+
+            </div>
+
+            <input class="btn btn-lg btn-success mt-3" type="submit" value="Cadastrar usuário">
+
 
         </form>
     </div>
@@ -49,10 +90,15 @@
         <div class= "container text-center">
             <p class="text-light"> Todos os direitos reservados - 2023</p>
         </div>
-    
     </footer>    
+
+
         
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js" integrity="sha384-geWF76RCwLtnZ8qwWowPQNguL3RmwHVBC9FhGdlKrxdiJJigb/j/68SIy3Te4Bkz" crossorigin="anonymous"></script>
 
 </body>
 </html>
+
+<?php
+    print_r($_POST);
+?>
