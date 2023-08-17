@@ -80,6 +80,27 @@
 
             </div>
 
+            <div class="row mt-3">
+                <div class="col-md-6">
+                    <input class="form-control" type="email" name="email" id="" placeholder="Digite seu email">
+                </div>
+
+                <div class="col-md-6">
+                    <input class="form-control" type="email" name="emailconfig" id="" placeholder="Confirme seu email">
+                </div>
+            </div>    
+
+            <div class="row mt-3">
+                <div class="col-md-6">
+                    <input class="form-control" type="password" name="senha" id="" placeholder="Digite sua senha"> 
+                </div>
+
+                <div class="col-md-6">
+                    <input class="form-control" type="password" name="senha" id="" placeholder="Confirme sua senha">
+                </div>
+            </div>    
+
+
             <input class="btn btn-lg btn-success mt-3" type="submit" value="Cadastrar usuário">
 
 
